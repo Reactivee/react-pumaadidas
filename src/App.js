@@ -52,9 +52,8 @@ function App() {
     setSearchInput(e.target.value)
   }
 
-  const addedItemBasket = (cardObj) => {
-    console.log(cardObj)
-    return basket.some(el => el.id == cardObj.parent_id)
+  const addedItemBasket = (item) => {
+    return basket.some(el => el.title == item.title)
   }
 
   const addFavorite = async (items) => {
@@ -114,7 +113,6 @@ function App() {
               <Route path="/orders" element={<Orders />} />
             </Routes>
           </BrowserRouter>,
-
 
         </div>
       </div>
